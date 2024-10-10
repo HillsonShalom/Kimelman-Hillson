@@ -2,9 +2,12 @@ import exp from 'express'
 import userRouter from './routes/userRoute'
 
 import 'dotenv/config'
+import { connection } from './config/database';
 const _port = process.env.PORT;
 
 const app = exp()
+
+connection()
 
 app.use('/users', userRouter)
 
