@@ -6,7 +6,7 @@ export interface iuser extends Document {
     password: string;
     email   : string;
     age     : number;
-    posts   : ipost[];
+    posts?   : ipost[];
 }
 
 const userSchema = new Schema<iuser>({

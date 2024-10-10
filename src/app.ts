@@ -9,6 +9,7 @@ const app = exp()
 
 connection()
 
+app.use(exp.json())
 app.use('/users', userRouter)
 
 app.listen(_port, () => {
